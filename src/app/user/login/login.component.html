@@ -1,0 +1,26 @@
+<div class="card loginDiv">
+    <div class="card-header">
+        <h4>{{pageTitle}}</h4>
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">User Name</label>
+                <input type="text" required class="form-control" id="formGroupExampleInput" placeholder="User Name">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Password</label>
+                <input type="password" required class="form-control" id="formGroupExampleInput2" placeholder="Password">
+            </div>
+            <div class="form-group butonGroup">
+                <button type="submit" (click)="login()" class="btn btn-primary">
+                    Log In
+                </button>
+                &nbsp;
+                <button class="btn btn-secondary" (click)="onCancel()">
+                    cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

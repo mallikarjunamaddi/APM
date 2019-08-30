@@ -1,0 +1,26 @@
+/* .productEditDiv{
+    width: 80%;
+    margin-left:10%;
+    margin-top:2%;
+} */
+
+.wizard a:first-child {
+-webkit-border-radius:8px 0 0 0px;
+-moz-border-radius: 8px 0 0 0px;
+border-radius: 8px 0 0 0px;
+}
+
+.wizard a:last-child {
+    -webkit-border-radius: 0 8px 0px 0;
+    -moz-border-radius:  0 8px 0px 0;
+    border-radius: 0 8px 0px 0;
+}
+
+.wizard .active{
+    background: #007ACC;
+    color: white;
+}
+
+.wizard .active:after{
+    border-left-color: #007ACC;
+}

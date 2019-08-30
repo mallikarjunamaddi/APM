@@ -1,0 +1,41 @@
+<div class="card productDetailsDiv" *ngIf="product">
+    <div class="card-header">
+        {{pageTitle}} : {{product.name}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8">
+                <div>Name: {{product.name}}</div>
+                <div> Code: {{product.code | convertToSpacesPipe : '-' | lowercase}}</div>
+                <div>Availability: {{product.available}}</div>
+                <div>Price:{{product.price | currency:"INR":"symbol":'1.2-2'}}</div>
+                <div>Description:{{product.description}}</div>
+
+                <shared-star-rating [rating]='product.starRating'></shared-star-rating>
+            </div>
+            <div class="col-md-4">
+                <img [src]="product.imageURL" [title]="product.name | uppercase" class="responsive" />
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-secondary" (click)="onBack()">
+            <span class="fa fa-chevron-left"></span>
+            Back
+        </button>
+        &nbsp;
+        <button class="btn btn-outline-primary" [routerLink]="['/products',product.productID,'edit']">
+            Edit
+        </button>
+    </div>
+</div>
+<div class="card productDetailsDiv" *ngIf="!product">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            {{errorMessage}}
+        </div>
+    </div>
+</div>

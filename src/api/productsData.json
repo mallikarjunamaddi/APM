@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "productID": 1,
+            "name": "ABC",
+            "code": "Xyz-123",
+            "available": "March 18, 2016",
+            "price": 20.42,
+            "starRating": 3.2,
+            "description": "ABC Product",
+            "category": "SAE",
+            "tags":["hello", "tag2"],
+            "imageURL": "https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg"
+        },
+        {
+            "productID": 2,
+            "name": "EFG",
+            "code": "Xyz-123",
+            "available": "March 18,2016",
+            "price": 20.41,
+            "starRating": 4.2,
+            "description": "EFG Product",
+            "category": "IAE",
+            "tags":["hello", "tag2"],
+            "imageURL": "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+    ]
+}

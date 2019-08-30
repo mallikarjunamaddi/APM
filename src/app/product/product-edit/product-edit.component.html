@@ -1,0 +1,27 @@
+<div class="card productEditDiv" *ngIf="product">
+    <div class="card-header">
+        <h4>{{pageTitle}}</h4>
+    </div>
+    <div class="card-body">
+        <div class="wizard">
+            <a [routerLink]="['info']"
+            routerLinkActive="active">
+                Basic Information
+            </a>
+            <a [routerLink]="['tags']"
+            routerLinkActive="active">
+                Search Tags
+            </a>
+        </div>
+        <router-outlet></router-outlet>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+                &nbsp;
+                <button class="btn btn-outline-secondary" (click)="onCancel()">Cancel</button>
+                &nbsp;
+                <button class="btn btn-outline-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
